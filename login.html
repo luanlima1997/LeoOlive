@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure-min.css"/>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+<style>
+
+.form-horizontal {
+	margin-left:18px;
+	margin-right:18px;
+}
+
+.btn btn-primary{
+margin-left:18px;
+	margin-right:18px;
+}
+
+
+</style>
+
+<script type="text/javascript">
+
+var admin = {user:"Leo", psw:"123"};
+
+var user;
+var psw;
+var isLogged = false;
+
+
+ function signIn(){
+	 if(admin.user == document.getElementById("user").value && admin.psw == document.getElementById("psw").value){
+		 
+		 isLogged = true;
+		 return window.location = ""
+	 }
+ }
+ 
+</script>
+
+</head>
+<body   background="http://www.html5webtemplate.com/images/bg.jpg">
+<br>
+
+<div class="col-md-4"></div>
+<div class="col-md-4">
+<div class="panel panel-primary ">
+ <div class="panel-heading ">Login</div>
+ <div class="panel-body">
+<form class="form-horizontal">
+  <div class="form-group">
+    <label class="sr-only" for="exampleInputEmail2">User</label>
+    <input type="text" class="form-control" id="user" name="user" placeholder="User">
+  </div>
+  <div class="form-group">
+    <label class="sr-only" for="exampleInputPassword2">Password</label>
+    <input type="password" class="form-control" id="psw" name="psw" placeholder="Password">
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Remember me
+    </label>
+  </div>
+  <br>
+  <button type="submit" type="button" class="btn btn-primary" onClick="signIn()">Sign in</button> 
+  <button type="submit" type="button" class="btn btn-primary">You don't have a account?</button>
+</form>
+</div>
+</div>
+<div class="col-md-4"></div>
+</div>
+
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+</body>
+</html>
